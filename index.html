@@ -1,10 +1,11 @@
-```html
+
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filterstocks.in | Quantitative Equity Research & Market Analytics</title>
+    <title>Filterstocks.in | Quantitative Equity Research</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -19,502 +20,441 @@
                             500: '#3b82f6',
                             600: '#2563eb',
                             700: '#1d4ed8',
-                            900: '#1e3a8a',
-                            gold: '#f59e0b'
                         }
                     }
                 }
             }
         }
     </script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
 </head>
-<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-200">
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 font-sans transition-colors duration-200">
 
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-indigo-600 flex items-center justify-center text-white font-bold text-xl shadow-md shadow-brand-500/20">
-                        <i data-lucide="filter" class="w-5 h-5"></i>
-                    </div>
-                    <span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">
-                        filterstocks<span class="text-brand-600 dark:text-brand-500">.in</span>
-                    </span>
+    <!-- HEADER / NAVIGATION -->
+    <header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            
+            <!-- Brand Logo with "V" Funnel Icon -->
+            <a href="#home" class="flex items-center gap-2.5 text-xl font-bold tracking-tight text-slate-900 dark:text-white">
+                <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center shadow-md shadow-brand-500/20">
+                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/>
+                    </svg>
                 </div>
-
-                <!-- Desktop Nav Links -->
-                <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
-                    <a href="#hero" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Home</a>
-                    <a href="#offerings" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Services</a>
-                    <a href="#screener" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Live Screener</a>
-                    <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">About & Research</a>
-                    <a href="#disclaimer" class="hover:text-brand-600 dark:hover:text-brand-500 transition-colors">Compliance</a>
-                </div>
-
-                <!-- Action Buttons & Theme Toggle -->
-                <div class="flex items-center space-x-3">
-                    <button id="themeToggle" class="p-2.5 rounded-xl border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Toggle Theme">
-                        <i data-lucide="moon" class="w-4 h-4 hidden dark:block"></i>
-                        <i data-lucide="sun" class="w-4 h-4 block dark:hidden"></i>
-                    </button>
-
-                    <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-sm transition-all shadow-sm hover:shadow-brand-500/25">
-                        <i data-lucide="send" class="w-4 h-4"></i>
-                        <span>Join Telegram</span>
-                    </a>
-
-                    <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg border border-slate-200 dark:border-slate-700">
-                        <i data-lucide="menu" class="w-5 h-5"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobileMenu" class="hidden md:hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-2 pb-4 space-y-2">
-            <a href="#hero" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">Home</a>
-            <a href="#offerings" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">Services</a>
-            <a href="#screener" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">Live Screener</a>
-            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">About & Research</a>
-            <a href="#disclaimer" class="block px-3 py-2 rounded-md hover:bg-slate-100 dark:hover:bg-slate-800">Compliance</a>
-            <a href="https://t.me/" target="_blank" rel="noopener noreferrer" class="block w-full text-center mt-2 px-4 py-2 rounded-xl bg-brand-600 text-white font-semibold text-sm">
-                Join Broadcast Channel
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="relative overflow-hidden py-20 lg:py-28 bg-gradient-to-b from-white via-slate-50 to-slate-100 dark:from-slate-900 dark:via-slate-900 dark:to-slate-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto space-y-6">
-                <!-- Badge -->
-                <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full border border-brand-500/30 bg-brand-500/10 text-brand-600 dark:text-brand-400 text-xs font-semibold uppercase tracking-wider">
-                    <i data-lucide="shield-check" class="w-4 h-4"></i>
-                    <span>Quantitative Equity Research & Screeners</span>
-                </div>
-
-                <!-- Main Headline -->
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
-                    Data-Driven Stock Selection. <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-indigo-500 to-indigo-700">Precision Analytical Rules.</span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-normal leading-relaxed">
-                    Filter Indian equities & derivative contracts through rigorous technical, fundamental, and quantitative criteria. Backed by 15+ years of capital markets track record.
-                </p>
-
-                <!-- CTA Buttons -->
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                    <a href="#screener" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-base shadow-lg shadow-brand-500/30 transition-all flex items-center justify-center space-x-2">
-                        <i data-lucide="sliders" class="w-5 h-5"></i>
-                        <span>Explore Live Screener</span>
-                    </a>
-                    <a href="#about" class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:bg-slate-200/50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-base transition-all flex items-center justify-center space-x-2">
-                        <i data-lucide="user-check" class="w-5 h-5"></i>
-                        <span>Research Credentials</span>
-                    </a>
-                </div>
-
-                <!-- Quick Metrics Bar -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-12 border-t border-slate-200 dark:border-slate-800">
-                    <div class="p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 shadow-sm">
-                        <p class="text-2xl font-bold text-slate-900 dark:text-white">15+ Yrs</p>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Market Experience</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 shadow-sm">
-                        <p class="text-2xl font-bold text-slate-900 dark:text-white">NISM XV</p>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Research Analyst Certified</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 shadow-sm">
-                        <p class="text-2xl font-bold text-slate-900 dark:text-white">NISM VIII</p>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Derivatives Specialist</p>
-                    </div>
-                    <div class="p-4 rounded-xl bg-white dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 shadow-sm">
-                        <p class="text-2xl font-bold text-slate-900 dark:text-white">V-Filter</p>
-                        <p class="text-xs text-slate-500 dark:text-slate-400">Proprietary Methodology</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Offerings Section -->
-    <section id="offerings" class="py-16 lg:py-24 bg-white dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
-                    Comprehensive Research & Strategy Framework
-                </h2>
-                <p class="mt-4 text-slate-600 dark:text-slate-400">
-                    Eliminate emotional bias with quantitative filtering and disciplined risk management.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 hover:border-brand-500/50 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-5">
-                        <i data-lucide="bar-chart-2" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Equity & Derivatives</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        In-depth analysis of NSE cash equities, futures setups, and open interest dynamics built on NISM-certified research methodologies.
-                    </p>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 hover:border-brand-500/50 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-5">
-                        <i data-lucide="filter" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">V-Shape Filtering</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Filtering setups through volume expansion, structural support recovery, and relative strength relative to Nifty benchmarks.
-                    </p>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 hover:border-brand-500/50 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-5">
-                        <i data-lucide="trending-up" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Swing & Intraday</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Data-driven technical triggers incorporating VWAP, ATR volatility stops, multi-timeframe moving averages, and pivot breakouts.
-                    </p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700/60 hover:border-brand-500/50 transition-all hover:shadow-lg">
-                    <div class="w-12 h-12 rounded-xl bg-brand-500/10 text-brand-600 dark:text-brand-400 flex items-center justify-center mb-5">
-                        <i data-lucide="shield-alert" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Risk & MTF Rules</h3>
-                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                        Strict position-sizing guidelines, margin trading facility (MTF) exposure caps, and risk-to-reward ratios to protect capital.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Screener Widget Section -->
-    <section id="screener" class="py-16 lg:py-24 bg-slate-100 dark:bg-slate-950">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
-                <div>
-                    <span class="text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">Live Preview Tool</span>
-                    <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-1">Interactive Stock Filter</h2>
-                </div>
-                <p class="text-sm text-slate-500 dark:text-slate-400 mt-2 md:mt-0">
-                    Filter by cap, sector, or analytical triggers
-                </p>
-            </div>
-
-            <!-- Screener Control Panel -->
-            <div class="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 mb-8 space-y-4">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <!-- Search Input -->
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Search Symbol/Name</label>
-                        <div class="relative">
-                            <i data-lucide="search" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
-                            <input type="text" id="searchInput" placeholder="e.g. Tata Motors, TCB..." class="w-full pl-9 pr-4 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                        </div>
-                    </div>
-
-                    <!-- Market Cap Filter -->
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Market Cap</label>
-                        <select id="capFilter" class="w-full px-3 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            <option value="ALL">All Capitalizations</option>
-                            <option value="Large Cap">Large Cap</option>
-                            <option value="Mid Cap">Mid Cap</option>
-                            <option value="Small Cap">Small Cap</option>
-                        </select>
-                    </div>
-
-                    <!-- Sector Filter -->
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Sector</label>
-                        <select id="sectorFilter" class="w-full px-3 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            <option value="ALL">All Sectors</option>
-                            <option value="Banking & Financials">Banking & Financials</option>
-                            <option value="IT & Tech">IT & Tech</option>
-                            <option value="Automobile">Automobile</option>
-                            <option value="Energy">Energy</option>
-                            <option value="Pharma">Pharma</option>
-                        </select>
-                    </div>
-
-                    <!-- Technical Trigger Filter -->
-                    <div>
-                        <label class="block text-xs font-semibold text-slate-600 dark:text-slate-400 mb-1">Quantitative Trigger</label>
-                        <select id="triggerFilter" class="w-full px-3 py-2 text-sm rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-800 dark:text-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-500">
-                            <option value="ALL">All Technical Triggers</option>
-                            <option value="V-Shape Reversal">V-Shape Reversal</option>
-                            <option value="VWAP Breakout">VWAP Breakout</option>
-                            <option value="Volume Surge">Volume Surge</option>
-                            <option value="200 DMA Support">200 DMA Support</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Table Container -->
-            <div class="overflow-x-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm">
-                <table class="w-full text-left border-collapse text-sm">
-                    <thead>
-                        <tr class="border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50 text-slate-500 dark:text-slate-400 font-semibold">
-                            <th class="py-4 px-6">Stock Symbol</th>
-                            <th class="py-4 px-6">Sector</th>
-                            <th class="py-4 px-6">Market Cap</th>
-                            <th class="py-4 px-6">LTP (₹)</th>
-                            <th class="py-4 px-6">Trigger Event</th>
-                            <th class="py-4 px-6 text-right">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="screenerTableBody" class="divide-y divide-slate-200 dark:divide-slate-800">
-                        <!-- Dynamic Rows Rendered by JS -->
-                    </tbody>
-                </table>
-            </div>
-            <p class="text-xs text-slate-400 dark:text-slate-500 mt-3 text-right">
-                * Sample analytical screening output for presentation purposes. Not direct buy/sell recommendations.
-            </p>
-        </div>
-    </section>
-
-    <!-- About / Research Specialist Section -->
-    <section id="about" class="py-16 lg:py-24 bg-white dark:bg-slate-900">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+               
                 
-                <!-- Experience Summary Column -->
-                <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center space-x-2 text-brand-600 dark:text-brand-400 font-semibold text-sm uppercase tracking-wider">
-                        <i data-lucide="award" class="w-4 h-4"></i>
-                        <span>Research Discipline & Specialization</span>
-                    </div>
+                 <!-- Text Logo + Italic Tagline Container -->
+<div class="flex flex-col">
+    <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-tight">
+        Filterstocks<span class="text-sky-500">.in</span>
+    </span>
+    <span class="text-[15px] italic font-medium tracking-wide text-sky-600 dark:text-sky-400 -mt-0.5">
+               ... finding true value                     
+    </span>
+</div>                                                                                                                                                                                                                       
+            </a>
 
-                    <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white leading-tight">
-                        Leave Market Analysis to Certified Capital Market Specialists.
-                    </h2>
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex space-x-8 font-medium text-slate-600 dark:text-slate-300">
+                <a href="#home" class="hover:text-brand-600 dark:hover:text-brand-500 transition">Home</a>
+                <a href="#services" class="hover:text-brand-600 dark:hover:text-brand-500 transition">Services</a>
+                <a href="#about" class="hover:text-brand-600 dark:hover:text-brand-500 transition">About</a>
+                <a href="#research" class="hover:text-brand-600 dark:hover:text-brand-500 transition">Research</a>
+                <a href="#certifications" class="hover:text-brand-600 dark:hover:text-brand-500 transition">Certifications</a>
+                <a href="#contact" class="hover:text-brand-600 dark:hover:text-brand-500 transition">Contact us</a>                                                                                                      
+                <a href="#compliance" class="hover:text-brand-600 dark:hover:text-brand-500 transition">Compliance</a>
+            </nav>
 
-                    <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-                        A dentist spends years mastering oral healthcare; a structural engineer spent years studying physics before building bridges. Stock selection is no different—it demands systematic quantitative filtering, risk metrics, and deep market experience.
-                    </p>
+            <!-- Actions: Night Mode Toggle (Telegram Removed) -->
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" type="button" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg p-2.5 text-sm transition" aria-label="Toggle dark mode">
+                    <!-- Sun Icon (Dark Mode Active) -->
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                    <!-- Moon Icon (Light Mode Active) -->
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
 
-                    <div class="space-y-4 pt-2">
-                        <div class="flex items-start space-x-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 dark:text-brand-400 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 dark:text-white">15 Year Track Record in Capital Markets</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">Former IT Financial Analyst at global institutions including Fidelity Investments, Franklin Templeton, and Barclays Group.</p>
-                            </div>
-                        </div>
+    <!-- SECTION 1: HOME / HERO -->
+    <section id="home" class="py-16 md:py-20 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            
+            <!-- Left Side: Custom Infographic Image -->
+            <div class="lg:col-span-6 flex justify-center items-center">
+                <div class="w-full bg-slate-50 dark:bg-slate-800 p-2 sm:p-4 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md">
+                    <img 
+                        src="filter-hero.png" 
+                        alt="Stock Filtering Concept - Filtering Noise, Finding True Value" 
+                        class="w-full h-auto rounded-xl object-contain block mx-auto"
+                    />
+                </div>
+            </div>
 
-                        <div class="flex items-start space-x-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 dark:text-brand-400 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 dark:text-white">NISM Series XV Certified Stock Research Analyst</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">Certified for rigorous fundamental, macro-economic, and equity research analysis.</p>
-                            </div>
-                        </div>
+            <!-- Right Side: Headline & Analogy Copy -->
+            <div class="lg:col-span-6">
+                <div class="space-y-2 text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed border-l-4 border-brand-600 pl-4 mb-6">
+                    <p>A carpenter builds fine furniture.</p>
+                    <p>A potter shapes ceramics with precision.</p>
+                    <p>A physician safeguards your family's health.</p>
+                </div>
+                                                                                                                                       
+                <h1 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-4 leading-tight"> 
+                  <!-- <h1 class="text-3xl sm:text-4xl font-bold text-amber-400 leading-tight"> -->    
+                    Managing high-net-worth equity capital demands equal dedication and specialized expertise.
+                </h1>
+                  
+                <!--
+                <p class="text-slate-600 dark:text-slate-400 text-base md:text-lg mb-8 leading-relaxed">   -->
+                     <p class="text-lg font-medium text-amber-300/90 leading-relaxed">                                                                                   
+                    Partner with an NISM-certified Research Analyst to bring institutional discipline, calculated position sizing, and dynamic risk management to your stock portfolio.
+                </p>
 
-                        <div class="flex items-start space-x-3">
-                            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-600 dark:text-brand-400 mt-1 flex-shrink-0"></i>
-                            <div>
-                                <h4 class="font-semibold text-slate-900 dark:text-white">NISM Series VIII Certified Derivatives Specialist</h4>
-                                <p class="text-xs text-slate-500 dark:text-slate-400">Specialized knowledge in options, futures, hedging, and volatility management.</p>
-                            </div>
-                        </div>
+                <a href="#services" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-brand-600 dark:hover:bg-brand-700 text-white font-medium px-6 py-3 rounded-lg transition shadow-md">
+                    <span>Explore Our Research Services</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: SERVICES -->
+    <section id="services" class="py-16 md:py-24 bg-slate-50 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold text-brand-600 dark:text-brand-400 tracking-wider uppercase mb-2">Our Offerings</h2>
+                <h3 class="text-3xl font-bold text-slate-900 dark:text-white">Two Ways We Support Your Equity Capital</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Option 1 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 font-bold text-xs rounded-full mb-4">OPTION 1</span>
+                        <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Model Portfolio Execution</h4>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-6">Designed for Fresh Capital Deployment</p>
+                        
+                        <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span>Quantitative stock selection backed by mathematical momentum, volatility filters, and volume metrics.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>Pre-defined allocation rules, risk-adjusted position sizing, and precise exit strategies.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Credential Card Column -->
-                <div class="lg:col-span-5">
-                    <div class="p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-indigo-950 text-white shadow-xl relative overflow-hidden border border-slate-800">
-                        <div class="space-y-6 relative z-10">
-                            <div>
-                                <span class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Independent Advisory</span>
-                                <h3 class="text-2xl font-bold text-white mt-1">Hari Krishna Konda</h3>
-                                <p class="text-slate-300 text-sm">Equity & Portfolio Advisor</p>
-                            </div>
-
-                            <div class="border-t border-slate-800 pt-4 space-y-2 text-xs text-slate-300">
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="map-pin" class="w-4 h-4 text-brand-gold"></i>
-                                    <span>Hyderabad, Telangana, India</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="mail" class="w-4 h-4 text-brand-gold"></i>
-                                    <span>harikrishna.konda@zohomail.in</span>
-                                </div>
-                                <div class="flex items-center space-x-2">
-                                    <i data-lucide="phone" class="w-4 h-4 text-brand-gold"></i>
-                                    <span>+91 8682986189</span>
-                                </div>
-                            </div>
-
-                            <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
-                                <span class="text-xs text-slate-400">Official Portal:</span>
-                                <span class="font-mono text-sm font-semibold text-brand-gold">filterstocks.in</span>
-                            </div>
-                        </div>
+                <!-- Option 2 -->
+                <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block px-3 py-1 bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 font-bold text-xs rounded-full mb-4">OPTION 2</span>
+                        <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">Your Conviction + Our Research</h4>
+                        <p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-6">Designed for Existing Portfolios</p>
+                        
+                        <ul class="space-y-4 text-slate-600 dark:text-slate-300 text-sm">
+                            <li class="flex items-start gap-3">
+                                <span><strong>Already hold a basket of stocks?</strong> Receive independent, data-driven research evaluations on your existing holdings.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span>Get systematic guidance and alerts to churn underperforming assets and lock in gains effectively.</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Regulatory & Disclaimer Section -->
-    <section id="disclaimer" class="py-12 bg-slate-100 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-4">
-                <div class="flex items-center space-x-2 text-amber-600 dark:text-amber-500 font-semibold text-sm">
-                    <i data-lucide="alert-triangle" class="w-5 h-5"></i>
-                    <span>Regulatory & Risk Compliance Disclosure</span>
-                </div>
-                <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                    <strong>SEBI Disclaimer:</strong> Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors. The stock screening tools, technical parameters, and analytical frameworks presented on <strong>filterstocks.in</strong> are strictly for educational and informational purposes. Past performance is not indicative of future results.
-                </p>
-                <p class="text-xs text-slate-500 dark:text-slate-500">
-                    Derivatives trading (Futures & Options) involves significant risk of loss and is not suitable for all investors. Ensure you assess your financial profile and risk appetite prior to taking capital exposure.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-12 text-sm text-slate-500 dark:text-slate-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-brand-600 flex items-center justify-center text-white font-bold text-sm">
-                    <i data-lucide="filter" class="w-4 h-4"></i>
-                </div>
-                <span class="font-bold text-slate-900 dark:text-white">Filterstocks.in</span>
-            </div>
-
-            <p class="text-xs text-center md:text-left">
-                © 2026 Filterstocks. All rights reserved. Designed for independent research & market analytics.
+    <!-- RESEARCH METHODOLOGY SECTION -->
+<section id="research" class="py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-sky-500 dark:text-sky-400">Quantitative Framework</span>
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-2 mb-4">Data-Driven Research Methodology</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base leading-relaxed">
+                At Filterstocks.in, we eliminate emotional bias and market chatter by filtering Indian equities through objective quantitative parameters, fundamental quality filters, and systematic risk management.
             </p>
+        </div>
 
-            <div class="flex space-x-6 text-xs">
-                <a href="#disclaimer" class="hover:text-brand-600">Privacy & Terms</a>
-                <a href="#about" class="hover:text-brand-600">Certifications</a>
-                <a href="mailto:harikrishna.konda@zohomail.in" class="hover:text-brand-600">Contact</a>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700">
+                <div class="w-12 h-12 bg-sky-500/10 text-sky-500 rounded-xl flex items-center justify-center font-bold mb-4">01</div>
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">Fundamental Filtering</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Strict evaluation of promoter integrity, capital efficiency (ROE/ROCE), debt levels, and business moat before any stock enters the watch universe.
+                </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700">
+                <div class="w-12 h-12 bg-sky-500/10 text-sky-500 rounded-xl flex items-center justify-center font-bold mb-4">02</div>
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">Technical Execution</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Combining indicator metrics (ATR, Anchored VWAP, Bollinger Bands) to pinpoint high-probability entry setups and structural price expansion.
+                </p>
+            </div>
+
+            <div class="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700">
+                <div class="w-12 h-12 bg-sky-500/10 text-sky-500 rounded-xl flex items-center justify-center font-bold mb-4">03</div>
+                <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2">Risk Management</h3>
+                <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                    Calculated position sizing, trailing stop-loss strategies, and portfolio exposure limits designed to prioritize capital preservation above all.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ABOUT SECTION -->
+<section id="about" class="py-16 bg-slate-50 dark:bg-slate-800/40 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5">
+            <span class="text-xs font-semibold uppercase tracking-wider text-sky-500 dark:text-sky-400">Background & Vision</span>
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-2 mb-4">Hari Krishna Konda</h2>
+            <!--<p class="text-sky-600 dark:text-sky-400 font-medium mb-6">15+ Years IT Financial Systems Professional & Market Analyst</p> -->
+            <p class="text-lg font-medium text-amber-300/90 mb-6">15+ Years IT Financial Systems Professional & Market Analyst</p>                                   
+            
+            <div class="space-y-4 text-slate-600 dark:text-slate-300 text-base leading-relaxed">
+                <p>
+                    With over 15 years of experience as an IT Analyst developing robust financial systems for global wealth management and banking institutions—including <strong>Fidelity Investments</strong>, <strong>Franklin Templeton Investments</strong>, and <strong>Barclays Group</strong>—I bring enterprise-grade analytical discipline to Indian capital markets.
+                </p>
+                <p>
+                    Active in capital markets since 2008, my approach evolved through observing multiple market cycles. This journey reinforced a core principle: <strong>business fundamentals and promoter quality form the ultimate safety net</strong>, while quantitative price rules govern execution timing.
+                </p>
+                <p>
+                    Today, Filterstocks.in serves as a dedicated research platform designed to help market participants filter out noise, execute with calculated position sizing, and stay aligned with high-conviction ideas.
+                </p>
+            </div>
+        </div>
+
+        <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white border-b border-slate-100 dark:border-slate-800 pb-3">
+                Core Research Philosophy
+            </h3>
+            
+            <div class="flex gap-4 items-start">
+                <div class="w-8 h-8 rounded-full bg-sky-500/10 text-sky-500 flex items-center justify-center shrink-0 font-bold">✓</div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white">Institutional Quality Filters</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Every research candidate must pass strict fundamental solvency and earnings growth checks.</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 items-start">
+                <div class="w-8 h-8 rounded-full bg-sky-500/10 text-sky-500 flex items-center justify-center shrink-0 font-bold">✓</div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white">Long-Term Wealth Compounding</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Identifying emerging market leaders early and allowing high-conviction ideas time to compound.</p>
+                </div>
+            </div>
+
+            <div class="flex gap-4 items-start">
+                <div class="w-8 h-8 rounded-full bg-sky-500/10 text-sky-500 flex items-center justify-center shrink-0 font-bold">✓</div>
+                <div>
+                    <h4 class="font-semibold text-slate-900 dark:text-white">Rule-Based Discipline</h4>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm">Replacing media chatter and emotional decisions with strict entry, exit, and stop-loss protocols.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- CERTIFICATIONS SECTION -->
+<section id="certifications" class="py-16 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-sky-500 dark:text-sky-400">SEBI Regulatory Framework</span>
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-2 mb-4">Professional Certifications</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base">
+                National Institute of Securities Markets (NISM) accreditations establishing technical qualification and research compliance.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Certificate 1 Card -->
+            <div class="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-sky-500/10 text-sky-500 font-semibold text-xs rounded-full">NISM Series XV</span>
+                        <span class="text-xs text-slate-400">Verified Qualification</span>
+                    </div>
+                    <h3 class=" text-xl font-bold text-slate-900 dark:text-white mb-2">Research Analyst Certification</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">
+                        Validates advanced competency in fundamental equity analysis, macroeconomic evaluation, company valuation, and regulatory compliance.
+                    </p>
+                </div>
+                <a href="nism-research-analyst.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-700 text-white font-medium px-5 py-2.5 rounded-lg transition text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>View Research Analyst Certificate (PDF)</span>
+                </a>
+            </div>
+
+            <!-- Certificate 2 Card -->
+            <div class="p-6 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-200 dark:border-slate-700 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="px-3 py-1 bg-sky-500/10 text-sky-500 font-semibold text-xs rounded-full">NISM Series VIII</span>
+                        <span class="text-xs text-slate-400">Verified Qualification</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Equity Derivatives Certification</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm mb-6">
+                        Validates specialized expertise in derivatives strategies, options risk dynamics, hedging execution, and market structure analytics.
+                    </p>
+                </div>
+                <a href="nism-equity-derivatives.pdf" target="_blank" class="inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 dark:bg-sky-600 dark:hover:bg-sky-700 text-white font-medium px-5 py-2.5 rounded-lg transition text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                    <span>View Derivatives Certificate (PDF)</span>
+                </a>
+            </div>
+        </div>
+
+        
+    </div>
+</section>
+     <!-- CONTACT US SECTION -->
+<section id="contact" class="py-16 bg-slate-50 dark:bg-slate-800/40">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+            <span class="text-xs font-semibold uppercase tracking-wider text-sky-500 dark:text-sky-400">Get In Touch</span>
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white mt-2 mb-4">Contact & Communication</h2>
+            <p class="text-slate-600 dark:text-slate-400 text-base">
+                Reach out for research access, platform inquiries, or professional queries.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-5xl mx-auto">
+            <!-- Contact Details Card -->
+            <div class="lg:col-span-5 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-1">Hari Krishna Konda</h3>
+                    <p class="text-sm text-sky-600 dark:text-sky-400 font-medium">NISM Certified Research Analyst</p>
+                </div>
+
+                <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-sky-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        <div>
+                            <strong class="block text-slate-900 dark:text-white font-medium">Address:</strong>
+                            House No: 25-36/5/K, Ground Floor,<br>
+                            Mallikarjuna Nagar, Beeramguda,<br>
+                            Hyderabad – 502032, Telangana, India
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-sky-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        <div>
+                            <strong class="block text-slate-900 dark:text-white font-medium">Phone & WhatsApp:</strong>
+                            <a href="tel:+918682986189" class="hover:text-sky-500 transition">+91 8682986189</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <svg class="w-5 h-5 text-sky-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <div>
+                            <strong class="block text-slate-900 dark:text-white font-medium">Email:</strong>
+                            <a href="mailto:harikrishna.konda@zohomail.in" class="hover:text-sky-500 transition">harikrishna.konda@zohomail.in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Action Box -->
+            <div class="lg:col-span-7 bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col justify-between">
+                <div>
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Connect via Telegram Broadcast</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6">
+                        Get live research updates, market structure commentary, and quantitative screeners directly on our official Telegram broadcast channel.
+                    </p>
+                </div>
+
+                <div class="space-y-4">
+                    <a href="https://t.me/" target="_blank" class="w-full inline-flex items-center justify-center gap-2 bg-sky-500 hover:bg-sky-600 text-white font-medium px-6 py-3 rounded-lg transition shadow-md">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.56 8.16l-2.02 9.52c-.15.68-.55.84-1.12.52l-3.1-2.28-1.5 1.44c-.17.17-.31.31-.63.31l.22-3.16 5.76-5.2c.25-.22-.05-.34-.39-.12l-7.12 4.48-3.07-.96c-.67-.21-.68-.67.14-.99l12.01-4.63c.56-.2 1.05.14.82 1.07z"/></svg>
+                        <span>Join Official Telegram Channel</span>
+                    </a>
+                    
+                    <p class="text-xs text-center text-slate-400">
+                        Official Domain: <strong>www.filterstocks.in</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- SECTION 4: COMPLIANCE & DISCLAIMER -->
+    <section id="compliance" class="py-16 bg-slate-50 dark:bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="max-w-4xl bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 space-y-4">
+                <h4 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">Regulatory Compliance & Disclaimers</h4>
+                <p>
+                    <strong>Investment Disclaimer:</strong> Stock market investments are subject to market risks. Past performance is not indicative of future returns. Research reports and trade signals provided on Filterstocks.in are for informational and educational purposes only.
+                </p>
+                <p>
+                    <strong>SEBI Compliance Notice:</strong> Registration granted by SEBI and certification from NISM in no way guarantee performance of the intermediary or provide assurance of returns to investors. Please perform your own due diligence before acting on any research recommendation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>&copy; Filterstocks.in. All rights reserved.</div>
+            <div class="flex space-x-6">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#research" class="hover:text-white transition">Research</a>
+                <a href="#certifications" class="hover:text-white transition">Certifications</a>
+                <a href="#contact" class="hover:text-white transition">Contact us</a>            
+                <a href="#compliance" class="hover:text-white transition">Compliance</a>
             </div>
         </div>
     </footer>
 
-    <!-- Script Logic -->
+    <!-- SCRIPT: DARK / LIGHT MODE TOGGLE -->
     <script>
-        // Lucide Icons Initialization
-        lucide.createIcons();
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
 
-        // Theme Toggle Functionality
-        const themeToggleBtn = document.getElementById('themeToggle');
-        themeToggleBtn.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Mock Stock Data
-        const stocksData = [
-            { symbol: "TATAMOTORS", sector: "Automobile", cap: "Large Cap", price: "984.50", trigger: "V-Shape Reversal" },
-            { symbol: "RELIANCE", sector: "Energy", cap: "Large Cap", price: "2940.10", trigger: "200 DMA Support" },
-            { symbol: "INFY", sector: "IT & Tech", cap: "Large Cap", price: "1820.00", trigger: "VWAP Breakout" },
-            { symbol: "DIXON", sector: "IT & Tech", cap: "Mid Cap", price: "12450.00", trigger: "Volume Surge" },
-            { symbol: "FEDERALBNK", sector: "Banking & Financials", cap: "Mid Cap", price: "198.20", trigger: "V-Shape Reversal" },
-            { symbol: "KALYANKJIL", sector: "Consumer", cap: "Mid Cap", price: "540.00", trigger: "Volume Surge" },
-            { symbol: "CDSL", sector: "Banking & Financials", cap: "Mid Cap", price: "1480.00", trigger: "VWAP Breakout" },
-            { symbol: "SUNPHARMA", sector: "Pharma", cap: "Large Cap", price: "1690.00", trigger: "200 DMA Support" }
-        ];
-
-        // Render Table Rows
-        const tbody = document.getElementById('screenerTableBody');
-        const searchInput = document.getElementById('searchInput');
-        const capFilter = document.getElementById('capFilter');
-        const sectorFilter = document.getElementById('sectorFilter');
-        const triggerFilter = document.getElementById('triggerFilter');
-
-        function renderTable() {
-            const searchVal = searchInput.value.toLowerCase();
-            const capVal = capFilter.value;
-            const sectorVal = sectorFilter.value;
-            const triggerVal = triggerFilter.value;
-
-            const filtered = stocksData.filter(stock => {
-                const matchesSearch = stock.symbol.toLowerCase().includes(searchVal);
-                const matchesCap = (capVal === "ALL" || stock.cap === capVal);
-                const matchesSector = (sectorVal === "ALL" || stock.sector === sectorVal);
-                const matchesTrigger = (triggerVal === "ALL" || stock.trigger === triggerVal);
-                return matchesSearch && matchesCap && matchesSector && matchesTrigger;
-            });
-
-            if (filtered.length === 0) {
-                tbody.innerHTML = `
-                    <tr>
-                        <td colspan="6" class="py-8 text-center text-slate-400">
-                            No stock setups match your selected filter criteria.
-                        </td>
-                    </tr>
-                `;
-                return;
-            }
-
-            tbody.innerHTML = filtered.map(stock => `
-                <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-800/40 transition-colors">
-                    <td class="py-4 px-6 font-bold text-slate-900 dark:text-white">${stock.symbol}</td>
-                    <td class="py-4 px-6 text-slate-600 dark:text-slate-300">${stock.sector}</td>
-                    <td class="py-4 px-6">
-                        <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
-                            ${stock.cap}
-                        </span>
-                    </td>
-                    <td class="py-4 px-6 font-mono font-medium text-slate-800 dark:text-slate-200">₹${stock.price}</td>
-                    <td class="py-4 px-6">
-                        <span class="inline-flex items-center space-x-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-brand-500/10 text-brand-600 dark:text-brand-400">
-                            <span class="w-1.5 h-1.5 rounded-full bg-brand-500 mr-1"></span>
-                            ${stock.trigger}
-                        </span>
-                    </td>
-                    <td class="py-4 px-6 text-right">
-                        <a href="#about" class="text-xs font-semibold text-brand-600 dark:text-brand-400 hover:underline">
-                            Request Insight
-                        </a>
-                    </td>
-                </tr>
-            `).join('');
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            lightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            darkIcon.classList.remove('hidden');
         }
 
-        // Event Listeners
-        searchInput.addEventListener('input', renderTable);
-        capFilter.addEventListener('change', renderTable);
-        sectorFilter.addEventListener('change', renderTable);
-        triggerFilter.addEventListener('change', renderTable);
+        themeToggleBtn.addEventListener('click', function() {
+            lightIcon.classList.toggle('hidden');
+            darkIcon.classList.toggle('hidden');
 
-        // Initial Table Render
-        renderTable();
+            if (localStorage.getItem('color-theme')) {
+                if (localStorage.getItem('color-theme') === 'light') {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                } else {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                }
+            } else {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                }
+            }
+        });
     </script>
 </body>
 </html>
-```
