@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" style="background-color: #0f172a; color: #f8fafc;">
 <head>
@@ -25,7 +26,6 @@
             }
         }
     </script>
-
 </head>
 <body style="background-color: #0f172a; color: #f8fafc;" class="font-sans min-h-screen">
 
@@ -160,9 +160,19 @@
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Quantitative Framework</span>
                 <h2 class="text-3xl font-bold text-white mt-2 mb-4">Data-Driven Research Methodology</h2>
-                <p class="text-slate-400 text-base leading-relaxed">
+                <p class="text-slate-400 text-base leading-relaxed mb-6">
                     At Filterstocks.in, we eliminate emotional bias and market chatter by filtering Indian equities through objective quantitative parameters, fundamental quality filters, and systematic risk management.
                 </p>
+                
+                <!-- RESEARCH ARCHIVES TRIGGER BUTTON -->
+                <button onclick="openResearchModal()" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white font-semibold px-6 py-3 rounded-lg transition shadow-md cursor-pointer text-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    <span>Click here for Research Archives</span>
+                </button>
+                 <button onclick="openMtfModal()" class="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-semibold px-6 py-3 rounded-lg transition shadow-md cursor-pointer text-sm mt-4 ml-0 sm:ml-3">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    <span>MTF Portfolio Strategy</span>
+                </button>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -192,7 +202,8 @@
             </div>
         </div>
     </section>
-<!-- ABOUT SECTION -->
+
+    <!-- ABOUT SECTION -->
     <section id="about" style="background-color: #020617; border-color: #1e293b;" class="py-16 border-b">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
@@ -325,74 +336,74 @@
     </section>
 
     <!-- CONTACT SECTION -->
-<section id="contact" style="background-color: #020617; border-color: #1e293b;" class="py-16 border-b">
-    <div class="max-w-7xl mx-auto px-6">
-        
-        <div class="text-center mb-12">
-            <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Get in Touch</span>
-            <h2 class="text-3xl font-bold text-white mt-1 mb-2">Contact & Communication</h2>
-            <p class="text-slate-400 text-sm">Reach out for research access, platform inquiries, or professional queries.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <section id="contact" style="background-color: #020617; border-color: #1e293b;" class="py-16 border-b">
+        <div class="max-w-7xl mx-auto px-6">
             
-            <!-- LEFT COLUMN: CONTACT DETAILS -->
-            <div style="background-color: #0f172a; border-color: #1e293b;" class="lg:col-span-5 p-8 rounded-2xl border shadow-sm space-y-6">
-                <div>
-                    <h3 class="text-xl font-bold text-white">Hari Krishna Konda</h3>
-                    <p class="text-sm text-sky-400 font-medium">NISM Certified Research Analyst</p>
-                </div>
-
-                <div class="space-y-4 text-slate-300 text-sm">
-                    <div class="flex items-start gap-3">
-                        <span class="text-sky-400 font-bold">📍</span>
-                        <div>
-                            <p class="font-semibold text-white">Address:</p>
-                            <p class="text-slate-400">House No: 25-36/6/A, Ground Floor,<br>Mallikarjuna Nagar, Beeramguda,<br>Hyderabad - 502032, Telangana, India</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3">
-                        <span class="text-sky-400 font-bold">📞</span>
-                        <div>
-                            <p class="font-semibold text-white">Phone & WhatsApp:</p>
-                            <p class="text-slate-400">+91 8946082378</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start gap-3">
-                        <span class="text-sky-400 font-bold">✉</span>
-                        <div>
-                            <p class="font-semibold text-white">Email:</p>
-                            <p class="text-slate-400">harikrishna.konda@zohomail.in</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="text-center mb-12">
+                <span class="text-xs font-semibold uppercase tracking-wider text-sky-400">Get in Touch</span>
+                <h2 class="text-3xl font-bold text-white mt-1 mb-2">Contact & Communication</h2>
+                <p class="text-slate-400 text-sm">Reach out for research access, platform inquiries, or professional queries.</p>
             </div>
 
-            <!-- RIGHT COLUMN: PURE LEAD CAPTURE GOOGLE FORM -->
-            <div style="background-color: #0f172a; border-color: #1e293b;" class="lg:col-span-7 p-6 sm:p-8 rounded-2xl border shadow-sm space-y-4">
-                <div>
-                    <h3 class="text-xl font-bold text-white">Request Information & Research Access</h3>
-                    <p class="text-slate-400 text-sm mt-1">
-                        Submit your details below and our team will review your inquiry.
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <!-- LEFT COLUMN: CONTACT DETAILS -->
+                <div style="background-color: #0f172a; border-color: #1e293b;" class="lg:col-span-5 p-8 rounded-2xl border shadow-sm space-y-6">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Hari Krishna Konda</h3>
+                        <p class="text-sm text-sky-400 font-medium">NISM Certified Research Analyst</p>
+                    </div>
+
+                    <div class="space-y-4 text-slate-300 text-sm">
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-400 font-bold">📍</span>
+                            <div>
+                                <p class="font-semibold text-white">Address:</p>
+                                <p class="text-slate-400">House No: 25-36/6/A, Ground Floor,<br>Mallikarjuna Nagar, Beeramguda,<br>Hyderabad - 502032, Telangana, India</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-400 font-bold">📞</span>
+                            <div>
+                                <p class="font-semibold text-white">Phone & WhatsApp:</p>
+                                <p class="text-slate-400">+91 8946082378</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <span class="text-sky-400 font-bold">✉</span>
+                            <div>
+                                <p class="font-semibold text-white">Email:</p>
+                                <p class="text-slate-400">harikrishna.konda@zohomail.in</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: PURE LEAD CAPTURE GOOGLE FORM -->
+                <div style="background-color: #0f172a; border-color: #1e293b;" class="lg:col-span-7 p-6 sm:p-8 rounded-2xl border shadow-sm space-y-4">
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Request Information & Research Access</h3>
+                        <p class="text-slate-400 text-sm mt-1">
+                            Submit your details below and our team will review your inquiry.
+                        </p>
+                    </div>
+
+                    <!-- Google Form Container -->
+                    <div class="w-full overflow-hidden rounded-xl bg-slate-900 border border-slate-800">
+                        <iframe data-tally-src="https://tally.so/embed/jaO456?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2281" frameborder="0" marginheight="0" marginwidth="0" title="Inquiry Form"></iframe>
+                        <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+                    </div>
+                    
+                    <p class="text-xs text-slate-500 text-center">
+                        Your information is stored securely and used solely for business communications.
                     </p>
                 </div>
 
-                <!-- Google Form Container -->
-                <div class="w-full overflow-hidden rounded-xl bg-slate-900 border border-slate-800">
-                    <iframe data-tally-src="https://tally.so/embed/jaO456?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2281" frameborder="0" marginheight="0" marginwidth="0" title="Inquiry Form"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
-                </div>
-                
-                <p class="text-xs text-slate-500 text-center">
-                    Your information is stored securely and used solely for business communications.
-                </p>
             </div>
-
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- SECTION 4: COMPLIANCE & DISCLAIMER -->
     <section id="compliance" style="background-color: #020617;" class="py-16">
@@ -424,7 +435,185 @@
             </div>
         </div>
     </footer>
-<script data-goatcounter="https://filterstocks.goatcounter.com/count"
-        defer src="https://gc.zgo.at/count.js"></script>
+
+    <!-- RESEARCH ARCHIVES POPUP MODAL -->
+<div id="researchArchivesModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-6xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+        
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
+            <div>
+                <h3 class="text-xl font-bold text-white">Historical Research Calls & Track Record</h3>
+                <p class="text-xs text-slate-400 mt-0.5">Transparent log of past recommendations, rationale summary, and current status.</p>
+            </div>
+            <button onclick="closeResearchModal()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition cursor-pointer text-lg font-bold">
+                &times;
+            </button>
+        </div>
+
+        <!-- Modal Body (Scrollable Table) -->
+        <div class="p-6 overflow-y-auto flex-1">
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse text-left text-xs sm:text-sm text-slate-300">
+                    <thead>
+                        <tr class="bg-slate-800/80 text-slate-200 border-b border-slate-700">
+                            <th class="p-3">Stock Name</th>
+                            <th class="p-3">Recommended Period</th>
+                            <th class="p-3">Rec. Price Zone</th>
+                            <th class="p-3">Target</th>
+                            <th class="p-3">Rationale Summary</th>
+                            <th class="p-3">Status</th>
+                            <th class="p-3">Annexure</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-800">
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-3 font-semibold text-white">Rishabh Instruments</td>
+                            <td class="p-3 text-slate-400">January - March 2026</td>
+                            <td class="p-3">316-340</td>
+                            <td class="p-3">770-840-1100</td>
+                            <td class="p-3 text-slate-400">Power Quality Analyzers, Solar String Inverters for global green energy shift.</td>
+                            <td class="p-3"><span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 font-semibold rounded text-xs">Second Target Achieved</span></td>
+                            <td class="p-3"><a href="Rishabh Research Annexure.pdf" target="_blank" class="text-sky-400 hover:underline font-medium">View PDF</a></td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-3 font-semibold text-white">Onward Technologies</td>
+                            <td class="p-3 text-slate-400">October 2025 - January 2026</td>
+                            <td class="p-3">218-236</td>
+                            <td class="p-3">492-556</td>
+                            <td class="p-3 text-slate-400">Transitioning from IT staffing to pure-play ER&D and Digital Transformation specialist.</td>
+                            <td class="p-3"><span class="px-2 py-1 bg-amber-500/10 text-amber-400 font-semibold rounded text-xs">Open - Appreciation of 45%</span></td>
+                            <td class="p-3"><a href="Onward Research Annexure.pdf" target="_blank" class="text-sky-400 hover:underline font-medium">View PDF</a></td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-3 font-semibold text-white">Mahindra Logistics</td>
+                            <td class="p-3 text-slate-400">Jun-25</td>
+                            <td class="p-3">270-290</td>
+                            <td class="p-3">572-618</td>
+                            <td class="p-3 text-slate-400">Robust head room sector, expansion of logistics warehouse in eastern India.</td>
+                            <td class="p-3"><span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 font-semibold rounded text-xs">Open - Appreciation of 55%</span></td>
+                            <td class="p-3"><a href="MidcapGems1B.jpg" target="_blank" class="text-sky-400 hover:underline font-medium">Midcap Gems Series A</a></td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-3 font-semibold text-white">Oriental Aromatics</td>
+                            <td class="p-3 text-slate-400">January - March 2026</td>
+                            <td class="p-3">240-260</td>
+                            <td class="p-3">540-570</td>
+                            <td class="p-3 text-slate-400">Prominent camphor usage in India, plant expansion and dedicated promoters.</td>
+                            <td class="p-3"><span class="px-2 py-1 bg-emerald-500/10 text-emerald-400 font-semibold rounded text-xs">Target Achieved</span></td>
+                            <td class="p-3"><a href="MidcapGems1B.jpg" target="_blank" class="text-sky-400 hover:underline font-medium">Midcap Gems Series A</a></td>
+                        </tr>
+                        <tr class="hover:bg-slate-800/40 transition">
+                            <td class="p-3 font-semibold text-white">AIA Engineering</td>
+                            <td class="p-3 text-slate-400">Jun-25</td>
+                            <td class="p-3">3100-3300</td>
+                            <td class="p-3">6400-7100</td>
+                            <td class="p-3 text-slate-400">Chromium-based drilling equipment for mining. Products under approval process.</td>
+                            <td class="p-3"><span class="px-2 py-1 bg-orange-500/10 text-orange-400 font-semibold rounded text-xs">Open: Price retraced to 3900</span></td>
+                            <td class="p-3"><a href="MidcapGems1A.jpg" target="_blank" class="text-sky-400 hover:underline font-medium">Midcap Gems Series A</a></td>
+                        </tr>
+                         <tr class="hover:bg-slate-800/40 transition">
+                                <td class="p-3 font-semibold text-white">Multiple stocks</td>
+                                <td class="p-3 text-slate-400">3 years</td>
+                                <td class="p-3">NA</td>
+                                <td class="p-3">NA</td>
+                                <td class="p-3 text-slate-400">Stocks like Engineers India,Redington,Bajaj Consumer Products,RHI Magnestia,Mukand LTD</td>
+                                <td class="p-3"><span class="px-2 py-1 bg-orange-500/10 text-orange-400 font-semibold rounded text-xs">Exited at 25% -40% profits based on volatility.</span></td>
+                                <td class="p-3">-</td>
+                            </tr>        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-slate-800 bg-slate-900/50 flex justify-end">
+            <button onclick="closeResearchModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-2 rounded-lg text-sm transition cursor-pointer">
+                Close Archives
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal Script Handler -->
+<script>
+    function openResearchModal() {
+        document.getElementById('researchArchivesModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeResearchModal() {
+        document.getElementById('researchArchivesModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+    window.onclick = function(event) {
+        var modal = document.getElementById('researchArchivesModal');
+        if (event.target == modal) {
+            closeResearchModal();
+        }
+    }
+</script>
+    <script data-goatcounter="https://filterstocks.goatcounter.com/count"
+            defer src="https://gc.zgo.at/count.js"></script>
+<!-- MTF PORTFOLIO STRATEGY MODAL (Authentic User Note) -->
+<div id="mtfModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm hidden">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl w-full max-w-3xl max-h-[90vh] flex flex-col shadow-2xl overflow-hidden">
+        
+        <!-- Modal Header -->
+        <div class="p-6 border-b border-slate-800 flex justify-between items-center bg-slate-900/50">
+            <div>
+                <span class="text-xs font-semibold uppercase tracking-wider text-amber-400">Direct Perspective</span>
+                <h3 class="text-xl font-bold text-white mt-0.5">MTF Portfolios & Market Experience</h3>
+            </div>
+            <button onclick="closeMtfModal()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center transition cursor-pointer text-lg font-bold">
+                &times;
+            </button>
+        </div>
+
+        <!-- Modal Body (Raw User Message) -->
+        <div class="p-6 overflow-y-auto space-y-4 text-slate-300 text-sm leading-relaxed whitespace-pre-line">Indian stock market has evolved rather i say revolutionised into multiple folds especially in last 6 years.
+People have learnt the market dynamics, value investing, fundamentals, technicals and other factors.
+
+Surprisingly Nifty Index and broader stocks are running based on Algos to an extent where US markets have not deployed those kind of Algos. No body know where this market will lead to.
+
+Margin Trading Facility (MTF) has become popular in last two years.
+As usual there are advantages and disadvantages with the MTF facility.
+Anything abnormal positions in stocks through MTF leads heavy losses.
+
+We will help investors in managing MTF based portfolios based on price, quantity, switching to right opportunities.
+Riding through various price points, size and time based entry, exit and reentries is the theme to be in game of long run of market cycles.
+
+You can find my experience in About Me section.
+My biggest rewards are picking KEI Industries around 25+ during 2013. Exited around 140+ after a year or so.
+I realised its true potential in last 3 years :-)
+During 2020 crisis, i hold Cochin Ship, CEAT and other dividend stocks.
+Cochin Shipyard got added at 280 or so and still holding 20% after booking profits in last year runup.
+
+There are failures during inital years of investments as well in 2009.
+Lack of knowledge and not knowing about corporate governance made me to entry into wrong stocks during initial phase.
+
+I would like to give my best to fellow investors during their market journey.</div>
+
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-slate-800 bg-slate-900/50 flex justify-end">
+            <button onclick="closeMtfModal()" class="bg-slate-800 hover:bg-slate-700 text-white font-medium px-5 py-2 rounded-lg text-sm transition cursor-pointer">
+                Close
+            </button>
+        </div>
+
+    </div>
+</div>
+
+<!-- MTF JavaScript Handler -->
+<script>
+    function openMtfModal() {
+        document.getElementById('mtfModal').classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeMtfModal() {
+        document.getElementById('mtfModal').classList.add('hidden');
+        document.body.style.overflow = 'auto';
+    }
+</script>
 </body>
 </html>
